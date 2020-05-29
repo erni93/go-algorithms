@@ -17,8 +17,8 @@ func generateRandomSlice(num int, limit int) []int {
 }
 
 func BenchmarkTwoNumbersSumFor(b *testing.B) {
-	numbers := generateRandomSlice(12345, 15)
 	sum := 15
+	numbers := generateRandomSlice(12345, sum)
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		TwoNumbersSumFor(numbers, sum)
@@ -26,8 +26,8 @@ func BenchmarkTwoNumbersSumFor(b *testing.B) {
 }
 
 func BenchmarkTwoNumbersSumMap(b *testing.B) {
-	numbers := generateRandomSlice(12345, 15)
 	sum := 15
+	numbers := generateRandomSlice(12345, sum)
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		TwoNumbersSumMap(numbers, sum)
@@ -35,9 +35,9 @@ func BenchmarkTwoNumbersSumMap(b *testing.B) {
 }
 
 func BenchmarkTwoNumbersSumShrinking(b *testing.B) {
-	numbers := generateRandomSlice(12345, 20)
-	sort.Ints(numbers)
 	sum := 20
+	numbers := generateRandomSlice(12345, sum)
+	sort.Ints(numbers)
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
 		TwoNumbersSumShrinking(numbers, sum)
