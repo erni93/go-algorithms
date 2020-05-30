@@ -3,4 +3,4 @@
 
 ## Basic
 
-[numbers-sum](/basic/numbers-sum.md)
+[numbers-sum](/basic/README.md)
