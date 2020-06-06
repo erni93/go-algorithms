@@ -1,6 +1,5 @@
 package basic
 
-// TwoNumbersSumFor Returns two numbers from an array where their sum is equal to the parameter sum, using double for
 func TwoNumbersSumFor(numbers []int, sum int) []int {
 	for i, num := range numbers {
 		for _, num2 := range numbers[i:] {
@@ -12,7 +11,6 @@ func TwoNumbersSumFor(numbers []int, sum int) []int {
 	return []int{}
 }
 
-// TwoNumbersSumMap Returns two numbers from an array where their sum is equal to the parameter sum, using map
 func TwoNumbersSumMap(numbers []int, sum int) []int {
 	history := make(map[int]bool)
 	for _, num := range numbers {
@@ -27,7 +25,6 @@ func TwoNumbersSumMap(numbers []int, sum int) []int {
 	return []int{}
 }
 
-// TwoNumbersSumShrinking Returns two numbers from an array where their sum is equal to the parameter sum, shrinking from the corners.
 // The numbers array must be shorted, low to high,
 func TwoNumbersSumShrinking(numbers []int, sum int) []int {
 	left := 0
