@@ -35,7 +35,7 @@ Returns two numbers from an array where their sum is equal to the parameter sum
 
 ## Validate Subsequence
 
-Returns a boolean value if one list of numbers is a subsequence of another list of numbers
+Returns a boolean value indicating if one list of numbers is a subsequence of another list of numbers
 
 ### Benchmarks
 
