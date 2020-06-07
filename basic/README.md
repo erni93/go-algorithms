@@ -32,3 +32,13 @@ Returns two numbers from an array where their sum is equal to the parameter sum
 | BenchmarkTwoNumbersSumFor-12 | 54696116  | 46.3 ns/op | 16 B/op | 1 allocs/op |
 | BenchmarkTwoNumbersSumMap-12 | 13092234  | 143 ns/op | 16 B/op | 1 allocs/op |
 | BenchmarkTwoNumbersSumShrinking-12 | 2445675  | 453 ns/op | 16 B/op | 1 allocs/op |
+
+## Validate Subsequence
+
+Returns a boolean value if one list of numbers is a subsequence of another list of numbers
+
+### Benchmarks
+
+| Name | Quantity | ns/op | B/op | allocs/op |
+|--|--|--|--|--|
+| BenchmarkValidateSubsequence-12 | 247067107  | 4.74 ns/op | 0 B/op | 0 allocs/op |
