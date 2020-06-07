@@ -12,7 +12,7 @@ func generateNumbers(start int, quantity int) []int {
 	return numbers
 }
 
-func BenchmarkValidateSubsequenceg(b *testing.B) {
+func BenchmarkValidateSubsequence(b *testing.B) {
 	numbers := generateNumbers(0, 12345)
 	subSequence := []int{numbers[0], numbers[450], numbers[6000], numbers[9000], numbers[12000]}
 	b.ResetTimer()
