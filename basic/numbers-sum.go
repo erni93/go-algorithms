@@ -1,5 +1,7 @@
 package basic
 
+import "fmt"
+
 func TwoNumbersSumFor(numbers []int, sum int) []int {
 	for i, num := range numbers {
 		for _, num2 := range numbers[i:] {
@@ -40,4 +42,10 @@ func TwoNumbersSumShrinking(numbers []int, sum int) []int {
 		}
 	}
 	return []int{}
+}
+
+func DemoTwoNumbersSum() {
+	fmt.Printf("[TwoNumbersSumFor] Input: %v want %d -> %v\n", []int{5, -2, 10, 8, 6}, 15, TwoNumbersSumFor([]int{5, -2, 10, 8, 6}, 15))
+	fmt.Printf("[TwoNumbersSumMap] Input: %v want %d -> %v\n", []int{5, -2, 10, 8, 6}, 15, TwoNumbersSumMap([]int{5, -2, 10, 8, 6}, 15))
+	fmt.Printf("[TwoNumbersSumShrinking] Input: %v want %d -> %v\n", []int{-2, 2, 3, 7, 9}, 10, TwoNumbersSumShrinking([]int{-2, 2, 3, 7, 9}, 10))
 }

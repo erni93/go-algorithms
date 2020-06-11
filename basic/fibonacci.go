@@ -1,5 +1,7 @@
 package basic
 
+import "fmt"
+
 func FibonacciRecursive(num int) int {
 	if num <= 1 {
 		return num
@@ -25,4 +27,10 @@ func FibonacciSpace(num int) int {
 		b = c
 	}
 	return b
+}
+
+func DemoFibonacci() {
+	fmt.Printf("[FibonacciRecursive] Input: %d -> %d\n", 6, FibonacciRecursive(6))
+	fmt.Printf("[FibonacciDynamic] Input: %d -> %d\n", 6, FibonacciDynamic(6))
+	fmt.Printf("[FibonacciSpace] Input: %d -> %d\n", 6, FibonacciSpace(6))
 }

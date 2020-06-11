@@ -1,5 +1,7 @@
 package basic
 
+import "fmt"
+
 func ValidateSubsequence(numbers []int, subsequence []int) bool {
 	if len(numbers) < len(subsequence) {
 		return false
@@ -15,4 +17,8 @@ func ValidateSubsequence(numbers []int, subsequence []int) bool {
 		}
 	}
 	return false
+}
+
+func DemoValidateSubsequence() {
+	fmt.Printf("[ValidateSubsequence] Numbers: %v Subsequence: %v -> %v\n", []int{5, 1, 22, 25, 6, -1, 8, 10}, []int{1, 6, -1, 10}, ValidateSubsequence([]int{5, 1, 22, 25, 6, -1, 8, 10}, []int{1, 6, -1, 10}))
 }
