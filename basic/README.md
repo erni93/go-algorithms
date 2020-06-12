@@ -1,5 +1,22 @@
 # Basic algorithms
 
+## Closest value in Binary Search Tree
+
+Find the closest value in Binary Search Tree
+
+### Benchmarks
+
+| Name | Quantity | ns/op | B/op | allocs/op |
+|--|--|--|--|--|
+| BenchmarkClosestValueBstRecursive/n=5-12 | 216392253 | 5.46 ns/op | 0 B/op | 0 allocs/op
+| BenchmarkClosestValueBstRecursive/n=3-12 | 120437488 | 9.98 ns/op | 0 B/op | 0 allocs/op
+| BenchmarkClosestValueBstRecursive/n=12-12 | 21364524 | 9.86 ns/op | 0 B/op | 0 allocs/op
+| BenchmarkClosestValueBstRecursive/n=18-12 | 21631774 | 9.76 ns/op | 0 B/op | 0 allocs/op
+| BenchmarkClosestValueBstIterative/n=5-12 | 268988937 | 4.45 ns/op | 0 B/op | 0 allocs/op
+| BenchmarkClosestValueBstIterative/n=3-12 | 162285542 | 7.44 ns/op | 0 B/op | 0 allocs/op
+| BenchmarkClosestValueBstIterative/n=12-12 | 60098214 | 7.53 ns/op | 0 B/op | 0 allocs/op
+| BenchmarkClosestValueBstIterative/n=18-12 | 60784563 | 7.42 ns/op | 0 B/op | 0 allocs/op
+
 ## Fibonacci
 
 Returns the nth Fibonacci number
