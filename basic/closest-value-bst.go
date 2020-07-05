@@ -1,17 +1,12 @@
 package basic
 
 import (
+	"algorithms/basic/shared"
 	"fmt"
 	"math"
 )
 
-type Node struct {
-	Value int
-	Left  *Node
-	Right *Node
-}
-
-func ClosestValueBstRecursive(node *Node, closest int, num int) int {
+func ClosestValueBstRecursive(node *shared.Node, closest int, num int) int {
 	valueAbs := int(math.Abs(float64(node.Value - num)))
 	if valueAbs == 0 {
 		return node.Value
@@ -27,7 +22,7 @@ func ClosestValueBstRecursive(node *Node, closest int, num int) int {
 	return closest
 }
 
-func ClosestValueBstIterative(node *Node, closest int, num int) int {
+func ClosestValueBstIterative(node *shared.Node, closest int, num int) int {
 	for node != nil {
 		valueAbs := int(math.Abs(float64(node.Value - num)))
 		if valueAbs == 0 {
@@ -45,30 +40,30 @@ func ClosestValueBstIterative(node *Node, closest int, num int) int {
 	return closest
 }
 
-func GetNode() Node {
-	return Node{
+func GetClosestNode() shared.Node {
+	return shared.Node{
 		Value: 10,
-		Left: &Node{
+		Left: &shared.Node{
 			Value: 5,
-			Left: &Node{
+			Left: &shared.Node{
 				Value: 2,
-				Left: &Node{
+				Left: &shared.Node{
 					Value: 1,
 				},
 			},
-			Right: &Node{
+			Right: &shared.Node{
 				Value: 5,
 			},
 		},
-		Right: &Node{
+		Right: &shared.Node{
 			Value: 15,
-			Left: &Node{
+			Left: &shared.Node{
 				Value: 13,
-				Right: &Node{
+				Right: &shared.Node{
 					Value: 14,
 				},
 			},
-			Right: &Node{
+			Right: &shared.Node{
 				Value: 22,
 			},
 		},
@@ -76,7 +71,7 @@ func GetNode() Node {
 }
 
 func DemoClosestValueBst() {
-	node := GetNode()
+	node := GetClosestNode()
 	fmt.Printf("[ClosestValueBstRecursive] %d -> %d\n", 12, ClosestValueBstRecursive(&node, node.Value, 12))
 	fmt.Printf("[ClosestValueBstIterative] %d -> %d\n", 12, ClosestValueBstIterative(&node, node.Value, 12))
 }

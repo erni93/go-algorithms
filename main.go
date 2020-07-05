@@ -9,4 +9,5 @@ func main() {
 	basic.DemoFibonacci()
 	basic.DemoValidateSubsequence()
 	basic.DemoClosestValueBst()
+	basic.DemoBranchSum()
 }

@@ -8,7 +8,7 @@ import (
 var closestNumbers = [4]int{5, 3, 12, 18}
 
 func BenchmarkClosestValueBstRecursive(b *testing.B) {
-	node := GetNode()
+	node := GetClosestNode()
 	for _, num := range closestNumbers {
 		b.Run(fmt.Sprintf("n=%d", num), func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
@@ -19,7 +19,7 @@ func BenchmarkClosestValueBstRecursive(b *testing.B) {
 }
 
 func BenchmarkClosestValueBstIterative(b *testing.B) {
-	node := GetNode()
+	node := GetClosestNode()
 	for _, num := range closestNumbers {
 		b.Run(fmt.Sprintf("n=%d", num), func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
