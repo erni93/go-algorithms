@@ -1,6 +1,17 @@
 # Basic algorithms
 
-## Closest value in Binary Search Tree
+## Branch sum in a Binary Tree
+
+Sum of all nodes in a binary tree
+
+### Benchmarks
+
+| Name | Quantity | ns/op | B/op | allocs/op |
+|--|--|--|--|--|
+| BenchmarkBranchSumRecursive-12 | 1 | 1171868200 ns/op | 1616782592 B/op | 56 allocs/op
+| BenchmarkBranchSumStack-12 | 1 | 916582400 ns/op | 1616782272 B/op | 52 allocs/op
+
+## Closest value in a Binary Search Tree
 
 Find the closest value in Binary Search Tree
 

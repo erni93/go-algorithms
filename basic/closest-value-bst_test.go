@@ -12,7 +12,7 @@ func BenchmarkClosestValueBstRecursive(b *testing.B) {
 	for _, num := range closestNumbers {
 		b.Run(fmt.Sprintf("n=%d", num), func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
-				ClosestValueBstRecursive(&node, node.Value, num)
+				ClosestValueBstRecursive(node, node.Value, num)
 			}
 		})
 	}
@@ -23,7 +23,7 @@ func BenchmarkClosestValueBstIterative(b *testing.B) {
 	for _, num := range closestNumbers {
 		b.Run(fmt.Sprintf("n=%d", num), func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
-				ClosestValueBstIterative(&node, node.Value, num)
+				ClosestValueBstIterative(node, node.Value, num)
 			}
 		})
 	}

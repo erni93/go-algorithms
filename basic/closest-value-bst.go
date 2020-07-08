@@ -40,8 +40,8 @@ func ClosestValueBstIterative(node *shared.Node, closest int, num int) int {
 	return closest
 }
 
-func GetClosestNode() shared.Node {
-	return shared.Node{
+func GetClosestNode() *shared.Node {
+	return &shared.Node{
 		Value: 10,
 		Left: &shared.Node{
 			Value: 5,
@@ -72,6 +72,6 @@ func GetClosestNode() shared.Node {
 
 func DemoClosestValueBst() {
 	node := GetClosestNode()
-	fmt.Printf("[ClosestValueBstRecursive] %d -> %d\n", 12, ClosestValueBstRecursive(&node, node.Value, 12))
-	fmt.Printf("[ClosestValueBstIterative] %d -> %d\n", 12, ClosestValueBstIterative(&node, node.Value, 12))
+	fmt.Printf("[ClosestValueBstRecursive] %d -> %d\n", 12, ClosestValueBstRecursive(node, node.Value, 12))
+	fmt.Printf("[ClosestValueBstIterative] %d -> %d\n", 12, ClosestValueBstIterative(node, node.Value, 12))
 }
