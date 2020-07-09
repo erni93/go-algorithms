@@ -26,7 +26,7 @@ func TestStack_Pop(t *testing.T) {
 		}
 	})
 	t.Run("Pop empty stack", func(t *testing.T) {
-		defer func() { recover() }()
+		defer func() { _ = recover() }()
 		emptyStack.Pop()
 		t.Errorf("Pop() did not panic")
 	})
